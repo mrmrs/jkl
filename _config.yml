@@ -1,5 +1,6 @@
 # This will be the first part of the title tag for your site <title> site.name + page.title </title>
 name: "JKL"
+title: "JKL : Light-weight Jekyll Scaffolding"
 # Populates the meta description for the site. Should be under 150 characters for best SEO purposes.
 descripiton: "Light-weight theme for a basic Jekyll project"
 
