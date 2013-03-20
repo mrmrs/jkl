@@ -12,7 +12,7 @@ url: "http://jk-l.cc"
 
 # Your UA tracking number (i.e 35858753-1) for Google Analytics. 
 # If you comment this out, or don't fill out this parameter - Google analytics won't be included. 
-#googleID: 
+googleID: 39423469-1
 
 # Pagination variable for how many posts to show in a list
 paginate: 5
