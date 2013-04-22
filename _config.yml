@@ -24,14 +24,6 @@ permalink: pretty
 # /:month-month:day-:year/:title.html/            => 04-29-2009/slap-chop.html
 # /blog/:yearr/:month/:day/:title                 => /blog/2009/04/29/slap-chop/index.html
 
-# If you want to display social nav - fill out the appropriate handles. Delete or comment out unneeded networks. 
-github: ""
-twitter: ""
-instagram: ""
-dribbble: ""
-soundcloud: ""
-flickr: ""
-
 # UnComment once you have pygments installed. Used for code syntax highlighting.
 #pygments: true
 
