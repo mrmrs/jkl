@@ -1,9 +1,17 @@
+/* ==========================================================================
+   GRID
+   ========================================================================== */
+
 .single-column {
   margin:0 auto;
   padding:1em;
   width:100%;
   max-width:768px!important;
 }
+
+
+/* Media Query mixin
+   ========================================================================== */
 
 @mixin breakpoint($viewport-width) {
   @if $viewport-width == one-hand {

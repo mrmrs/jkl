@@ -1,9 +1,9 @@
 .large-list {
   font-size:$type-4;  
-  li {
+  .large-list--item {
     border-top:1px solid #eee;
   }
-  a {
+  .large-list--link {
     display:block;
     padding:1em 0;
     color:$grey-dark;
