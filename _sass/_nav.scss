@@ -1,6 +1,9 @@
+
 .site-nav--item {
   display:inline-block;
-  font-size:$type-4;
+  font-size:$type-5;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
   &:last-child {
     border-right: none;
   }
@@ -8,9 +11,10 @@
 
 .site-nav--link {
   font-weight:100;
-  color:$grey-medium;
-  display:block;
-  padding-right:1em;
+  color:#222;
+  display:inline-block;
+  margin-bottom:10px;
+  padding:10px;
   text-decoration: none;
   &:hover,
   &:focus {
@@ -19,4 +23,9 @@
   &:active {
     color: #666;
   }
+}
+
+.site-footer {
+  background:#eee;
+  border-top:1px solid #e3e3e3;
 }

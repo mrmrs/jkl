@@ -2,13 +2,20 @@
 
 @import "normalize";
 
+/**
+ * Import Google Fonts
+ * Comment out lines 10,11 if you want to default to native fonts.
+ */
+
+//@import url(http://fonts.googleapis.com/css?family=Raleway);)
+@import "google_fonts";
+
 @import "vars";
 @import "colors";
 @import "grid";
 @import "type";
 @import "skins";
 @import "lists";
-@import "buttons";
 @import "links";
 @import "nav";
 @import "spacing";

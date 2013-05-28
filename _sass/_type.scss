@@ -2,16 +2,20 @@
 
 h1,h2,h3,h4,h5,h6 {
   font-weight:100;
+  letter-spacing:0.1em;
+
 }
 
 // I mean it's not that big.
 
 h1,.h2,.h3,.h4,.h5,.h6 {
-  margin-bottom:.25em;
+  margin-bottom:10px;
+  text-transform:uppercase;
 }
 
 h1,.h1 {
   font-size:$type-1;
+  font-weight:900;
 }
 
 h2,.h2 {
@@ -29,7 +33,6 @@ h4,.h4 {
 
 h5,.h5 {
   font-size:$type-4;
-  font-style:italic;
 }
 
 h6,.h6 {
@@ -37,11 +40,10 @@ h6,.h6 {
 }
 
 p {
-  // Because 20px body copy is the new Black
   font-size:$type-4;
   line-height:$copy-line-height;
   + p { 
-    margin-top:1em;
+    margin-top:10px;
   }
 }
 
@@ -51,27 +53,21 @@ p {
 
 .post {
    h1 {
-    font-size:$type-2;
-    @include breakpoint(one-hand) {
-        font-size:$type-3;
-    }
+   margin-bottom:40px;
+    @include breakpoint(one-hand) { margin-bottom:40px;font-size:$type-3; }
   }
-  footer {
-    color:$grey-light;
-  }
+  footer { color:$grey-medium; }
 }
 
 .h1-r {
-  @include breakpoint(one-hand) {
-    font-size:$type-2; 
-  }
+  @include breakpoint(one-hand) { font-size:$type-2; }
 }
 
 // Uh you don't need to read this stuff. Let's make it small.
-.meta {
-  font-size:$type-5; 
-}
-
+.meta { @extend .sans-serif;font-size:$type-6; text-transform: uppercase; color:#666; letter-spacing:.1em;}
+.post-footer {font-size:$type-5;}
+.post-title {font-size:$type-1;font-weight:bold;}
+.center {text-align:center;}
 .ct {
   text-align:center;
   @include breakpoint(one-hand) {
@@ -80,12 +76,11 @@ p {
 }
 
 blockquote {
-  padding:1em 0 1.75em 0;
+  padding:10px 0 20px 0;
   font-style:italic;
-  p {
-    font-size:$type-3;
-  }
-  footer,footer a {
+  p { font-size:$type-3; }
+  footer,
+  footer a {
     font-size:$type-4;
     line-height:2;
     text-decoration:none;
@@ -93,19 +88,19 @@ blockquote {
   }
 }
 
-em {
-  font-style:italic;
-}
+em { font-style:italic; }
 
 .bump-it {
   font-size:$type-3; 
-  margin-bottom:1em;
+  margin-bottom:10px;
 }
 
-.author {
-  text-transform:uppercase;
-}
+.caps,
+.author { text-transform:uppercase; }
 
-date {
-  color:$grey-medium;
+time { color:$grey-medium; }
+
+.post--info {
+  font-size:$type-4;
+  .meta {display:block;}
 }
