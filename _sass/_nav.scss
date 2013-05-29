@@ -1,3 +1,8 @@
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+
 
 .site-nav--item {
   display:inline-block;
@@ -17,15 +22,10 @@
   padding:10px;
   text-decoration: none;
   &:hover,
-  &:focus {
-    color:$orange;
-  }
-  &:active {
-    color: #666;
-  }
+  &:focus {  color:$orange; }
+  &:active { color: #666; }
 }
 
 .site-footer {
-  background:#eee;
-  border-top:1px solid #e3e3e3;
+  @extend .secondary-skin;
 }

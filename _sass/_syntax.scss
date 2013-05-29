@@ -1,3 +1,16 @@
+/* ==========================================================================
+   SYNTAX HIGHLIGHTING
+   ========================================================================== */
+
+/**
+ * For use with pygments highlighting
+ *
+ * Example: 
+ *    {% highlight ruby %}
+ *      some code example here
+ *    {% endhighlight %}
+ */
+
 .hll { background-color: #333333 }
 .c { color: #008800; font-style: italic; background-color: #0f140f } /* Comment */
 .err { color: #ffffff } /* Error */

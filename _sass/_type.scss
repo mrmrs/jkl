@@ -1,9 +1,13 @@
+body {
+  font-family: georgia, serif;
+  font-size: 20px;
+}
 // The internet is run on paragraphs and links. Let people see them please.
 
 h1,h2,h3,h4,h5,h6 {
   font-weight:100;
-  letter-spacing:0.1em;
-
+  letter-spacing:.05em;
+  @extend .sans-serif;
 }
 
 // I mean it's not that big.
@@ -15,7 +19,6 @@ h1,.h2,.h3,.h4,.h5,.h6 {
 
 h1,.h1 {
   font-size:$type-1;
-  font-weight:900;
 }
 
 h2,.h2 {
@@ -28,7 +31,6 @@ h3,.h3 {
 
 h4,.h4 {
   font-size:$type-4;
-  font-weight:900;
 }
 
 h5,.h5 {
@@ -63,6 +65,7 @@ p {
   @include breakpoint(one-hand) { font-size:$type-2; }
 }
 
+
 // Uh you don't need to read this stuff. Let's make it small.
 .meta { @extend .sans-serif;font-size:$type-6; text-transform: uppercase; color:#666; letter-spacing:.1em;}
 .post-footer {font-size:$type-5;}
@@ -76,15 +79,16 @@ p {
 }
 
 blockquote {
-  padding:10px 0 20px 0;
+  margin:30px 0 40px 0;
   font-style:italic;
-  p { font-size:$type-3; }
+  p { font-size:$type-quote;padding:0; margin:0 0 20px 0;}
   footer,
   footer a {
-    font-size:$type-4;
-    line-height:2;
+    font-style: normal;
+    font-size:$type-5;
+    line-height:1.5;
     text-decoration:none;
-    color:#999;
+    color:#777;
   }
 }
 
@@ -104,3 +108,5 @@ time { color:$grey-medium; }
   font-size:$type-4;
   .meta {display:block;}
 }
+
+
