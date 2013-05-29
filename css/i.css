@@ -197,7 +197,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -333,7 +333,7 @@ table {
    ========================================================================== */
 ol, ul {
   list-style-type: none;
-  margin: 1em 0;
+  margin: 0;
   padding: 0; }
 
 /* ==========================================================================
@@ -344,6 +344,13 @@ ol, ul {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+/**
+ * Import Google Fonts
+ * Comment out lines 10,11 if you want to default to native fonts.
+ */
+.sans-serif, h1, h2, h3, h4, h5, h6, .meta {
+  font-family: 'Average Sans', helvetica, sans-serif; }
+
 /*
 $primary-color:;
 $secondary-color:;
@@ -353,61 +360,86 @@ $padding:;
 $margin:;
 
 */
+/* ==========================================================================
+   GRID
+   ========================================================================== */
+/* Single and responsive column
+   ========================================================================== */
 .single-column {
   margin: 0 auto;
   padding: 1em;
   width: 100%;
-  max-width: 768px!important; }
+  max-width: 768px !important; }
+
+/* Media Query mixin
+   ========================================================================== */
+body {
+  font-family: georgia, serif;
+  font-size: 20px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 100; }
+  font-weight: 100;
+  letter-spacing: .05em; }
 
 h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: .25em; }
+  margin-bottom: 10px;
+  text-transform: uppercase; }
 
 h1, .h1 {
-  font-size: 128px; }
-
-h2, .h2 {
   font-size: 64px; }
 
+h2, .h2 {
+  font-size: 48px; }
+
 h3, .h3 {
-  font-size: 32px; }
+  font-size: 24px; }
 
 h4, .h4 {
-  font-size: 20px;
-  font-weight: 900; }
+  font-size: 20px; }
 
 h5, .h5 {
-  font-size: 20px;
-  font-style: italic; }
+  font-size: 20px; }
 
 h6, .h6 {
-  font-size: 12px; }
+  font-size: 16px; }
 
 p {
   font-size: 20px;
   line-height: 1.5; }
   p + p {
-    margin-top: 1em; }
+    margin-top: 10px; }
 
 .intro {
-  font-size: 32px; }
+  font-size: 24px; }
 
 .post h1 {
-  font-size: 64px; }
+  margin-bottom: 40px; }
   @media screen and (min-width: 100px) and (max-width: 479px) {
     .post h1 {
-      font-size: 32px; } }
+      margin-bottom: 40px;
+      font-size: 24px; } }
 .post footer {
-  color: #eeeeee; }
+  color: #777777; }
 
 @media screen and (min-width: 100px) and (max-width: 479px) {
   .h1-r {
-    font-size: 64px; } }
+    font-size: 48px; } }
 
 .meta {
-  font-size: 12px; }
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #666;
+  letter-spacing: .1em; }
+
+.post-footer {
+  font-size: 16px; }
+
+.post-title {
+  font-size: 64px;
+  font-weight: bold; }
+
+.center {
+  text-align: center; }
 
 .ct {
   text-align: center; }
@@ -416,49 +448,77 @@ p {
       text-align: left; } }
 
 blockquote {
-  padding: 1em 0 1.75em 0;
+  margin: 30px 0 40px 0;
   font-style: italic; }
   blockquote p {
-    font-size: 32px; }
-  blockquote footer, blockquote footer a {
-    font-size: 20px;
-    line-height: 2;
+    font-size: 32px;
+    padding: 0;
+    margin: 0 0 20px 0; }
+  blockquote footer,
+  blockquote footer a {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
     text-decoration: none;
-    color: #999; }
+    color: #777; }
 
 em {
   font-style: italic; }
 
 .bump-it {
-  font-size: 32px;
-  margin-bottom: 1em; }
+  font-size: 24px;
+  margin-bottom: 10px; }
 
+.caps,
 .author {
   text-transform: uppercase; }
 
-date {
+time {
   color: #777777; }
+
+.post--info {
+  font-size: 20px; }
+  .post--info .meta {
+    display: block; }
 
 .bb {
   border-bottom: 1px dotted #eeeeee; }
 
+.bg-dark, code {
+  color: #fff;
+  background: #222222; }
+
+.rounded, code {
+  border-radius: 3px; }
+
+.secondary-skin, .site-footer {
+  background: #eee;
+  border-top: 1px solid #e3e3e3; }
+
+/* ==========================================================================
+   LISTS
+   ========================================================================== */
+/* Archive list
+   ========================================================================== */
 .large-list {
   font-size: 20px; }
-  .large-list li {
-    border-top: 1px solid #eeeeee; }
-  .large-list a {
+  .large-list .large-list--item {
+    border-top: 1px solid #eee; }
+  .large-list .large-list--link {
+    color: #222222;
     display: block;
     padding: 1em 0;
-    color: #222222;
     line-height: 1.5;
     text-decoration: none; }
-    .large-list a:hover, .large-list a:active {
+    .large-list .large-list--link:hover, .large-list .large-list--link:active {
       color: #ff5335; }
-      .large-list a:hover .meta, .large-list a:active .meta {
+      .large-list .large-list--link:hover .meta, .large-list .large-list--link:active .meta {
         color: #ff5335; }
-    .large-list a .meta {
+    .large-list .large-list--link .meta {
       display: block; }
 
+/* Posts
+   ========================================================================== */
 .post ul, .post dl {
   line-height: 1.618;
   font-size: 20px;
@@ -475,53 +535,66 @@ date {
 a {
   text-decoration: none; }
 
-nav[role="navigation"] li,
-ul.social li {
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+.site-nav--item {
   display: inline-block;
-  font-size: 20px; }
-  nav[role="navigation"] li:last-child,
-  ul.social li:last-child {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em; }
+  .site-nav--item:last-child {
     border-right: none; }
-  nav[role="navigation"] li a,
-  ul.social li a {
-    font-weight: 100;
-    color: #777777;
-    display: block;
-    padding-right: 1em;
-    text-decoration: none; }
-    nav[role="navigation"] li a:hover, nav[role="navigation"] li a:focus,
-    ul.social li a:hover,
-    ul.social li a:focus {
-      color: #ff5335; }
-    nav[role="navigation"] li a:active,
-    ul.social li a:active {
-      color: #666; }
 
-.horizontal li {
-  display: inline-block; }
-.horizontal li a {
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  background: #eee;
-  outline: 1px solid #e3e3e3;
+.site-nav--link {
+  font-weight: 100;
+  color: #222;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px;
   text-decoration: none; }
+  .site-nav--link:hover, .site-nav--link:focus {
+    color: #ff5335; }
+  .site-nav--link:active {
+    color: #666; }
 
+/* ==========================================================================
+   SPACING
+
+   - Padding
+   - Spacing
+   ========================================================================== */
+/* Padding
+   ========================================================================== */
 .row {
-  padding: 2em 0; }
+  padding: 20px 0; }
 
+/* Margins
+   ========================================================================== */
 .mt-1 {
-  margin-top: 1em; }
+  margin-top: 10px; }
 
 .mt-2 {
-  margin-top: 2em; }
+  margin-top: 20px; }
 
 .mt-4 {
-  margin-top: 8em; }
+  margin-top: 40px; }
 
 img {
   width: 100%;
-  margin: 1em 0; }
+  margin: 10px 0; }
 
+/* ==========================================================================
+   SYNTAX HIGHLIGHTING
+   ========================================================================== */
+/**
+ * For use with pygments highlighting
+ *
+ * Example: 
+ *    {% highlight ruby %}
+ *      some code example here
+ *    {% endhighlight %}
+ */
 .hll {
   background-color: #333333; }
 
@@ -827,10 +900,6 @@ img {
 
 /* Literal.Number.Integer.Long */
 code {
-  background: #222222;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   display: block;
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   font-size: 14px;
@@ -838,7 +907,27 @@ code {
   letter-spacing: 0.1em;
   margin: 1em 0;
   overflow: scroll;
-  padding: 1em; }
+  padding: 20px;
+  max-width: 100%; }
   @media screen and (min-width: 100px) and (max-width: 479px) {
     code {
-      padding: 1em 0.2em; } }
+      padding: 10px;
+      font-size: 12px; } }
+
+.header-full-bleed {
+  margin: 0;
+  max-height: 500px;
+  min-height: 400px;
+  background-size: cover; }
+  .header-full-bleed h1 {
+    margin-top: 100px; }
+
+@media screen and (min-width: 100px) and (max-width: 479px) {
+  .full-bleed-title {
+    font-size: 32px; }
+
+  .header-full-bleed {
+    max-height: 300px;
+    min-height: 200px; }
+    .header-full-bleed h1 {
+      margin-top: 40px; } }
