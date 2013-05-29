@@ -20,3 +20,8 @@ desc "Remove _site from directory before committing"
 task :clean do
   system "rm -rf _site"
 end # task :clean
+
+desc "Remove examples from _posts before developing your own site."
+task :fresh do
+  system "rm _posts/*.html && rm _posts/*.md"
+end # task :fresh
