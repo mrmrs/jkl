@@ -1,24 +1,44 @@
+/* ==========================================================================
+   LISTS
+   ========================================================================== */
+
+
+/* Archive list
+   ========================================================================== */
+
 .large-list {
-  font-size:$type-4;  
-  li {
+  font-size:$type-3;  
+  .large-list--item {
     border-top:1px solid #eee;
   }
-  a {
+
+  .large-list--link {
+    color:$grey-dark;
     display:block;
     padding:1em 0;
-    color:$grey-dark;
     line-height:1.5;
     text-decoration:none;
+    transition:color .3s;
+    -webkit-transition:color .3s;
     &:hover,
     &:active {
+      transition:color .3s;
+      -webkit-transition:color .3s;
       color:$orange;
       .meta {color:$orange;}
     }
+
     .meta {
       display:block; 
     }
+
   }
 }
+
+
+
+/* Posts
+   ========================================================================== */
 
 .post {
     ul,dl {

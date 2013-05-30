@@ -1,6 +1,10 @@
+#
+# Site config for a jekyll project
+#
+
 # This will be the first part of the title tag for your site <title> site.name + page.title </title>
-name: "JKL"
 title: "JKL : Light-weight Jekyll Scaffolding"
+
 # Populates the meta description for the site. Should be under 150 characters for best SEO purposes.
 descripiton: "Light-weight theme for a basic Jekyll project"
 
@@ -15,7 +19,7 @@ url: "http://jk-l.cc"
 googleID: 39423469-1
 
 # Pagination variable for how many posts to show in a list
-paginate: 5
+paginate: 10
 
 # Style of permalinks
 permalink: pretty
@@ -25,15 +29,8 @@ permalink: pretty
 # /:month-month:day-:year/:title.html/            => 04-29-2009/slap-chop.html
 # /blog/:yearr/:month/:day/:title                 => /blog/2009/04/29/slap-chop/index.html
 
-# If you want to display social nav - fill out the appropriate handles. Delete or comment out unneeded networks. 
-github: ""
-twitter: ""
-instagram: ""
-dribbble: ""
-soundcloud: ""
-flickr: ""
-
 # UnComment once you have pygments installed. Used for code syntax highlighting.
-#pygments: true
+# pygments: true
 
-exclude: Rakefile
+# Add anything here you don't want copied to _site. By default anything with a leading underscore won't be copied over.
+exclude: [Rakefile]

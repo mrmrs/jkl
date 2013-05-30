@@ -1,29 +1,22 @@
 ---
 layout: default
 ---
-
-<section class="single-column">
-  <article class="post">
-    {% for post in site.posts limit: 1 %}
-       <h1 class="ct h1">{{ post.title }}</h1>
-      {{ post.content }}
-    {% endfor %}
-  </article>
-  <section class="mt-4">
-    <article>
-      <ul class="large-list ct mt-1">
+  <section>
+    <div class="single-column">
+      
+    </div>
+  </section>
+  <section>
+    <article class="single-column mt-4">
+      <h1 class="h3 ct">Post Examples</h1>
+      <ul class="large-list ct mt-4">
         {% for post in paginator.posts %}
-          <li>
-            <a href="{{ post.url }}" title="{{post.title}}">
-              <date datetime="{{post.date}}" class="meta">
-                {{ post.date | date_to_long_string }}
-              </date>
+          <li class="large-list--item">
+            <a href="{{ post.url }}" title="{{post.title}}" class="large-list--link">
               {{ post.title }}
             </a>
           </li>
         {% endfor %}
       </ul>
-      <p class="ct"><a href="{{site.url}}/archives/" class="ct" title="Archives">...</a></p>
     </article>
   </section>
-</section>
