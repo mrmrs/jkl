@@ -7,8 +7,7 @@
    ========================================================================== */
 
 .large-list {
-  font-size:$type-4;  
-
+  font-size:$type-3;  
   .large-list--item {
     border-top:1px solid #eee;
   }
@@ -19,8 +18,12 @@
     padding:1em 0;
     line-height:1.5;
     text-decoration:none;
+    transition:color .3s;
+    -webkit-transition:color .3s;
     &:hover,
     &:active {
+      transition:color .3s;
+      -webkit-transition:color .3s;
       color:$orange;
       .meta {color:$orange;}
     }

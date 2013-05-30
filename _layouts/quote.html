@@ -1,21 +1,21 @@
 {% include _head.html %}
 <body>
   <article class="mt-2 post single-column">
+      <h1 class="h4">
+        {{page.title}}
+      </h1>
     <!-- This is where the title: in your front matter gets dropped in.-->
-    <header>
-      {% if page.author %}
-      <p class="post-footer">
-        By {{page.author}}
-        on <time datetime="{{page.date}}">{{page.date | date: "%d %B %Y"}}</time> 
-      </p>
-      {% endif %}
-    <h1 class="h1">
-      {{page.title}}
-    </h1>
-  </header>
     <!-- This is where post content lives -->
       {{content}}
     <!-- end of post content -->
+      {% if page.author %}
+      <footer>
+        <p class="post-footer">
+          By {{page.author}}
+          on <time datetime="{{page.date}}">{{page.date | date: "%d %B %Y"}}</time> 
+        </p>
+      </footer>
+      {% endif %}
   </article>
   {% include _related_posts.html %}
   {% include _footer.html %}

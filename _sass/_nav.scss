@@ -21,8 +21,14 @@
   margin-bottom:10px;
   padding:10px;
   text-decoration: none;
+  transition:color .3s;
+  -webkit-transition:color .3s;
   &:hover,
-  &:focus {  color:$orange; }
+  &:focus {  
+    color:$orange; 
+    transition:color .3s;
+    -webkit-transition:color .3s;
+  }
   &:active { color: #666; }
 }
 

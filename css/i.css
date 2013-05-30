@@ -392,7 +392,7 @@ h2, .h2 {
   font-size: 48px; }
 
 h3, .h3 {
-  font-size: 24px; }
+  font-size: 32px; }
 
 h4, .h4 {
   font-size: 20px; }
@@ -501,7 +501,7 @@ time {
 /* Archive list
    ========================================================================== */
 .large-list {
-  font-size: 20px; }
+  font-size: 24px; }
   .large-list .large-list--item {
     border-top: 1px solid #eee; }
   .large-list .large-list--link {
@@ -509,8 +509,12 @@ time {
     display: block;
     padding: 1em 0;
     line-height: 1.5;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: color .3s;
+    -webkit-transition: color .3s; }
     .large-list .large-list--link:hover, .large-list .large-list--link:active {
+      transition: color .3s;
+      -webkit-transition: color .3s;
       color: #ff5335; }
       .large-list .large-list--link:hover .meta, .large-list .large-list--link:active .meta {
         color: #ff5335; }
@@ -535,6 +539,11 @@ time {
 a {
   text-decoration: none; }
 
+.footer-link {
+  color: #ff5335; }
+  .footer-link:hover {
+    color: #222; }
+
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
@@ -552,9 +561,13 @@ a {
   display: inline-block;
   margin-bottom: 10px;
   padding: 10px;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color .3s;
+  -webkit-transition: color .3s; }
   .site-nav--link:hover, .site-nav--link:focus {
-    color: #ff5335; }
+    color: #ff5335;
+    transition: color .3s;
+    -webkit-transition: color .3s; }
   .site-nav--link:active {
     color: #666; }
 
@@ -569,6 +582,9 @@ a {
 .row {
   padding: 20px 0; }
 
+@media screen and (min-width: 100px) and (max-width: 479px) {
+  .mobile-padding-top {
+    padding-top: 100px !important; } }
 /* Margins
    ========================================================================== */
 .mt-1 {

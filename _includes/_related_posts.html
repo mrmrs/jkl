@@ -1,7 +1,7 @@
 <article class="single-column mt-2"> 
-  <h1 class="h3 sans-serif">Related Posts</h1> 
-  <ul class="large-list">
-  {% for post in site.related_posts limit: 5 %}
+  <h1 class="h2 sans-serif ct">Post Examples</h1> 
+  <ul class="large-list ct mt-4">
+  {% for post in site.related_posts limit: 10 %}
     <li class="large-list--item">
       <a href="{{ post.url }}" title="{{post.title}}" class="large-list--link">
         <date class="meta">{{ post.date | date_to_long_string }}</date>
